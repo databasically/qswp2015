@@ -1,0 +1,28 @@
+/**
+ * Superthe.me
+ * ------------------------------------------------------------------------
+ */
+
+// Mixins
+@import 'mixins.less';
+
+// Theme
+@import 'theme/default.less';
+
+// Small screens and horizontal tablets
+@media (min-width: 768px) and (max-width: 979px)
+{
+	@import 'theme/laptop.less';
+}
+
+// Vertical tablets
+@media (max-width: 767px)
+{
+	@import 'theme/tablet.less';
+}
+
+// Mobile phones and smaller
+@media (max-width: 480px)
+{
+	@import 'theme/phone.less';
+}

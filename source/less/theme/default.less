@@ -1,0 +1,561 @@
+/**
+ * Theme settings
+ */
+
+// Google Web Fonts
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif');
+
+// Default font
+@fontFamily: 'Open Sans', sans-serif;
+@fontSize: 12;
+@fontWeight: 400;
+
+// Alternative font
+@fontFamilyAlt: 'Bree Serif', serif;
+@fontSizeAlt: 12;
+@fontWeightAlt: 400;
+
+// Colors
+@headerBackground: rgba(255, 255, 255, 0.95);
+@backgroundColor: #fff;
+@backgroundColorAlt: whiteSmoke;
+@headerBackgroundColor: #fff;
+@infoBackgroundColor: #333;
+@footerBackgroundColor: #111;
+
+@boxShadow: 0 1px 6px #2d2d2d;
+
+@borderColor: #eee;
+
+@fontColor: #333;
+@fontColorInv: #fff;
+@fontColorAlt: #00ABED;
+@infoFontColor: #fff;
+@footerFontColor: #fff;
+
+@color1: #58838C;
+@color2: #DAD7C7;
+@color3: #BF996B;
+@color4: #BF5841;
+@color5: #A61C1C;
+
+html
+{
+	font-size: 62.5%;
+}
+
+body
+{
+	.fontSize(@fontSize);
+	font-family: @fontFamily;
+	font-weight: @fontWeight;
+	color: @fontColor;
+	background-color: @backgroundColor;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: @fontFamilyAlt;
+	font-weight: @fontWeightAlt;
+	color: @fontColor;
+}
+
+section
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#header
+{
+	position: fixed;
+	z-index: 1;
+	display: inline-block;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: @headerBackgroundColor;
+	background: @headerBackground;
+	box-shadow: @boxShadow;
+	border-bottom: solid @borderColor 2px;
+
+	#colors
+	{
+		
+		div
+		{
+			padding: 0;
+			margin: 0;
+			width: 10%;
+			height: 6px;
+			float: left;
+			display: inline-block;
+
+			&.color1 { background-color: @color1; }
+
+			&.color2 { background-color: @color2; }
+
+			&.color3 { background-color: @color3; }
+
+			&.color4 { background-color: @color4; }
+
+			&.color5 { background-color: @color5; }
+
+		}
+
+	}
+
+	#menu
+	{
+
+		margin-bottom: auto;
+
+		.navbar-inner
+		{
+			padding-left: 0;
+			padding-right: 0;
+			min-height: auto;
+			background: none;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		.btn-navbar
+		{
+			margin-top: 30px;
+		}
+
+		#nav
+		{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			float: right;
+
+			li
+			{
+				float: left;
+
+				a
+				{
+					padding: 10px 20px;
+					margin: auto 5px;
+					line-height: 92px;
+					.fontSize(14);
+					color: @fontColor;
+					border-radius: 5px;
+					-webkit-transition: all 0.2s ease-in-out;
+					-moz-transition: all 0.2s ease-in-out;
+					-o-transition: all 0.2s ease-in-out;
+					-ms-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+
+					&:hover
+					{
+						text-decoration: none;
+						color: @fontColorInv;
+					}
+
+					&.active
+					{
+						color: @fontColorInv;
+					}
+
+				}
+
+				a.color1
+				{
+
+					&:hover { background-color: @color1; }
+
+					&.active { background-color: @color1; }
+
+				}
+
+				a.color2
+				{
+
+					&:hover { background-color: @color2; }
+
+					&.active { background-color: @color2; }
+
+				}
+
+				a.color3
+				{
+
+					&:hover { background-color: @color3; }
+
+					&.active { background-color: @color3; }
+
+				}
+
+				a.color4
+				{
+
+					&:hover { background-color: @color4; }
+
+					&.active { background-color: @color4; }
+
+				}
+
+				a.color5
+				{
+
+					&:hover { background-color: @color5; }
+
+					&.active { background-color: @color5;}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	#logo
+	{
+		i
+		{
+			.fontSize(23);
+			float: left;
+			background-color: @color5;
+			color: white;
+			margin: 26px 10px 0 0;
+			padding: 10px;
+			border-radius: 100%;
+			width: 20px;
+			height: 20px;
+		}
+
+		h1
+		{
+			float: left;
+			line-height: 92px;
+			padding: 0;
+			margin: 0;
+			font-family: @fontFamilyAlt;
+			.fontSize(24);
+		}
+
+	}
+
+}
+
+.bar
+{
+	margin-top: 100px;
+
+	h1
+	{
+		line-height: 100px;
+		color: @fontColorInv;
+	}
+
+	&.color1 { background-color: @color1; border-bottom: solid 2px darken(@color1, 10%); }
+
+	&.color2 { background-color: @color2; border-bottom: solid 2px darken(@color2, 10%); }
+
+	&.color3 { background-color: @color3; border-bottom: solid 2px darken(@color3, 10%); }
+
+	&.color4 { background-color: @color4; border-bottom: solid 2px darken(@color4, 10%); }
+
+	&.color5 { background-color: @color5; border-bottom: solid 2px darken(@color5, 10%); }
+
+}
+
+#shoutbox
+{
+
+	h3
+	{
+		text-align: center;
+	}
+}
+
+#features
+{
+
+	text-align: center;
+
+	h4
+	{
+		text-align: left;
+	}
+
+	h2
+	{
+		line-height: 80px;
+		text-align: center;
+	}
+
+	p
+	{
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+}
+
+#people
+{
+
+	text-align: center;
+
+	h4, h5
+	{
+		text-align: left;
+	}
+
+	h2
+	{
+		line-height: 80px;
+		text-align: center;
+	}
+
+	p
+	{
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+}
+
+#services
+{
+
+	background-color: @backgroundColorAlt;
+	background-image: url('../img/bgs/exclusive_paper.png');
+	text-align: center;
+	border-top: 1px solid #E4E4E4;
+	border-bottom: 1px solid #E4E4E4;
+
+	h2
+	{
+		line-height: 80px;
+		text-align: center;
+	}
+
+	p
+	{
+		text-align: justify;
+		text-justify: inter-word;
+		margin-bottom: 40px;
+	}
+
+	i
+	{
+		.fontSize(23);
+		background-color: @color1;
+		color: white;
+		padding: 10px;
+		border-radius: 100%;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+	}
+	
+}
+
+#page
+{
+
+	h2
+	{
+		line-height: 80px;
+		text-align: center;
+	}
+
+	p
+	{
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+}
+
+#portfolio
+{
+
+	.gallery
+	{
+		position: relative;
+		padding: 0;
+
+		.span4
+		{
+			margin-bottom: 20px;
+		}
+
+		div
+		{
+			float: left;
+			background: #fff;
+			position: relative;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+			
+			a
+			{
+				overflow: hidden;
+				display: block;
+				position: relative;
+
+				img
+				{
+					display: block;
+					position: relative;
+				}
+
+				div
+				{
+					position: absolute;
+					background: rgba(75,75,75,0.7);
+					width: 100%;
+					height: 100%;
+					text-align: center;
+
+					&.da-animate
+					{
+						-webkit-transition: all 0.3s ease;
+						-moz-transition: all 0.3s ease-in-out;
+						-o-transition: all 0.3s ease-in-out;
+						-ms-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+					}
+
+					span
+					{
+						display: inline-block;
+						text-transform: uppercase;
+						font-weight: normal;
+						color: rgba(255,255,255,0.9);
+						text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+						border-bottom: 1px solid rgba(255,255,255,0.5);
+						margin-top: 20%;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.da-slideFromTop
+	{
+		left: 0px;
+		top: -100%;
+	}
+
+	.da-slideFromBottom
+	{
+		left: 0px;
+		top: 100%;
+	}
+
+	.da-slideFromLeft
+	{
+		top: 0px; 
+		left: -100%;
+	}
+
+	.da-slideFromRight
+	{
+		top: 0px;
+		left: 100%;
+	}
+
+	.da-slideTop
+	{
+		top: 0px;
+	}
+
+	.da-slideLeft
+	{
+		left: 0px;
+	}
+
+}
+
+#blog
+{
+
+	.post
+	{
+		margin-bottom: 20px;
+	}
+
+	hr
+	{
+		margin: 20px 0 40px 0;
+	}
+
+}
+
+#info
+{
+	background-color: @infoBackgroundColor;
+	background-image: url('../img/bgs/black-Linen.png');
+	color: @infoFontColor;
+
+	h1, h2, h3, h4, h5, h6
+	{
+		color: @infoFontColor;
+	}
+
+	h4
+	{
+		line-height: 40px;
+	}
+
+	a
+	{
+		color: @footerFontColor;
+
+		&:hover
+		{
+			text-decoration: none;
+		}
+	}
+
+}
+
+#footer
+{
+	background-color: @footerBackgroundColor;
+	background-image: url('../img/bgs/black_linen_v2.png');
+	color: @footerFontColor;
+
+	p
+	{
+		line-height: 30px;
+		margin: 0;
+	}
+
+	a
+	{
+		color: @footerFontColor;
+
+		&:hover
+		{
+			text-decoration: none;
+		}
+	}
+
+	#social
+	{
+		text-align: right;
+
+		i
+		{
+			.fontSize(16);
+			margin: auto 5px;
+			line-height: 30px;
+		}
+	}
+
+}

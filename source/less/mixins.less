@@ -1,0 +1,9 @@
+/**
+ * CSS3 rem font size
+ */
+.fontSize(@size: 10)
+{
+	@rem: (@size / 10);
+	font-size: ~"@{size}px"; 
+	font-size: ~"@{rem}rem";
+}
