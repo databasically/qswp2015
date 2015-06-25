@@ -1,5 +1,5 @@
 ---
-# layout: "products"
+# layout: "layout"
 category: 'color1'
 ---
 
@@ -7,13 +7,13 @@ category: 'color1'
     <div class="container">
       <div class="row-fluid">
         <div class="span12">
-          <h1><%= product_values['category'] %> - <%= product_name %></h1>
+          <h1><%= product_name %></h1>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="page">
+  <section id="page" style="">
     <div class="container" style="">
       <div id="sect1" class="row-fluid">
         <div id="portfolio" class="span12">
@@ -26,7 +26,7 @@ category: 'color1'
             <div id="pp3" style="margin-left:auto;margin-right:auto;width:100%;padding:30px;width:600px;">
               <p>
 <!--               class="span4" style="padding-left:12px;padding-right:12px;padding-top:8px;clear:left;min-height:200px;overflow:auto;margin-bottom:10px;min-width:607px;margin-left:0px;width:607px;" -->
-                <%= product_name %> anchor is designed with slotted holes in protruding front tabs providing a rigid backing for a wire pintle tie installed with the anchor. Two 1/4" diameter holes located in the back portion of the anchor are used for attaching the anchor to the backup material. Pintle ties used with the RB14 anchor are manufactured with two vertical leg extensions, 1 5/8" in length, which provide a means of adjustment for tie to properly line up with a mortar joint when veneer is applied. Pintle ties are available in projection sizes of 3", 4", and 5".
+                <%= product_values['description'] %>
               </p>
             </div>              
           </div>
